@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="includes/style.css" />
+		<title> students grades web service API</title>
+	</head>
+	<body style="background-color:#F5F5DC">
+		<div id="wrapper" style="margin:0px auto ;padding:0px ;width:1004px"  >
+			<header style="height:150px ;width: 1004px; background-color:#A9A9A9;">
+				<h1 style="font-family:fantasy ; padding:40px; font-size: 50px ; color:#000000" ><span style="color:#696969">Students Grades</span> web service API</h1>
+			</header>	
+			
+			<main style="background-color:#D0D0D0; font-family:Arial">
+				<section>
+					<ul style="border-style: double">
+						<li style="font-family: :Tahoma; font-size: 30px";>Get all students and grades:</li>
+						<p>in order to get all the student list and their grades use <span style="font-weight: bold;">getAllStudent()</span> function.</p>
+						<p> <span style="background-color:#F5F5DC;font-weight: bold; ">&#8680 Function signature:</span><p>
+						<a href="https://students-grades.herokuapp.com/getAllStudents">https://students-grades.herokuapp.com/getAllStudents</a>
+					</ul>
+				</section>
+
+				<section>
+					<ul style="border-style: double">
+						<li style="font-family: :Tahoma; font-size: 30px";>Get specific student grades:</li>
+						<p>in order to get the grades of specific student use <span style="font-weight: bold;">getStudGradeById(id)</span> function.</p>
+						<p> <span style="background-color:#F5F5DC;font-weight: bold; ">&#8680 Function signature:</span><p>
+						<p>https://students-grades.herokuapp.com/getStudGradeById/:userid<p>
+						<p> <span style="background-color:#F5F5DC;font-weight: bold; ">&#8680 Example:</span><p>
+						<a href="https://students-grades.herokuapp.com/getStudGradeById/301427647">https://students-grades.herokuapp.com/getStudGradeById/301427647</a>
+					</ul>
+				</section>
+
+				<section>
+					<ul style="border-style: double">
+						<li style="font-family: :Tahoma; font-size: 30px";>Get list of students from a particular year:</li>
+						<p>in order to get list of students from a particular year use  <span style="font-weight: bold;">getStudentsByYear(year)</span> function.</p>
+						<p>Please notice that the argument "year" must be between 1 to 4.<p>
+						<p>1- is first year students, 2 is second year students, et cetera...</p> 
+						<p> <span style="background-color:#F5F5DC;font-weight: bold; ">&#8680 Function signature:</span><p>
+						<p>https://students-grades.herokuapp.com/getStudentsByYear/:year<p>
+						<p> <span style="background-color:#F5F5DC;font-weight: bold; ">&#8680 Example:</span><p>
+						<a href="https://students-grades.herokuapp.com/getStudentsByYear/3">https://students-grades.herokuapp.com/getStudentsByYear/3</a>
+					</ul>
+				</section>
+				
+				<p> ** All of these functions returns a JSON object. </p>
+		
+			</main>
+		</div>
+	</body>
+</html>
