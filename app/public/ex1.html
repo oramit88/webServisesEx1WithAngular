@@ -1,0 +1,60 @@
+ <!DOCTYPE html>
+ <html ng-app="gradesApp">
+ <head>
+     <title>StudentGrades app</title>
+     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+ </head>
+ <body ng-controller="GradesController">
+    <div class="page-header">
+        <h1>{{students.collegeName}}'s Grades List</h1>
+        <span>number of results:</span>
+        <span class="label label-default" ng-class="warningLevel()" ng-hide="incompleteCount()==0">{{incompleteCount()}}</span>
+    </div>
+    <div class="panel">
+         <div class="form-group">
+         <form class="form-horizontal">
+                <label>
+                 id:
+                     <input class="form-control" ng-model="IdText" input type="text" required>
+                </label>
+                <span class="input-group-btn">
+                        <button class="btn btn-default" ng-click="getStudentById(IdText)">Search student By Id</button>
+                </span>
+        </form>
+        <form>
+                <label>
+                Year:
+                    <input class="form-control" ng-model="YearText" input type="text" required>
+                </label>
+                <span class="input-group-btn">
+                    <button class="btn btn-default" ng-click="getStudentsByYear(YearText)">Search student By Year</button>
+                </span>
+         </form>
+    </div>
+         <table class="table table-striped">
+             <thead>
+                    <tr>
+                        <th>Comment</th>
+                        <th>Name</th>
+                        <th>Student ID</th>
+                        <th>Year</th>
+                        <th>Courses</th>
+                    </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in students.studentList">
+                    <td>{{item.Error}}</td>
+                    <td>{{item.name}}</td>
+                    <td>{{item.studentId}}</td>
+                    <td>{{item.year}}</td>
+                    <td ng-repeat="item in item.courses">{{item.courseName}}</td>
+                </tr>
+             </tbody>
+
+         </table>
+    </div>
+    <script src="js/lib/angular/angular.min.js"></script>
+    <script src="js/students.js"></script>
+</body>
+</html>
